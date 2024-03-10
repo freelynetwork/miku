@@ -36,7 +36,7 @@ export default class extends Module {
 			const mainStream = this.ai.connection.useSharedConnection('main');
 			mainStream.on('pageEvent', msg => {
 				if (msg.event === 'inviteReversi') {
-					this.ai.api('games/reversi/match', {
+					this.ai.api('reversi/match', {
 						userId: msg.user.id
 					});
 				}
